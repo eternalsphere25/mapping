@@ -44,3 +44,14 @@ This repository contains code that generates geographic maps of various countrie
 Map colors can be found on the package websites:
 * https://matplotlib.org/stable/gallery/color/named_colors.html
 * https://gropandas.org/en/stabe/docs/user_guide/mapping.html
+
+## Schema for 'statistics.db'
+The 'statistics.db' file is not included for privacy reasons. A new one can be
+generated using the schema below:
+* Table name: Country name (ex. 'united_states')
+* Table columns:
+  * id (ex. '0')
+  * name (ex. 'Hawaii')
+  * visited (0=False, 1=True)
+  * overnight (0=False, 1=True)
+  * lived (0=False, 1=True)
