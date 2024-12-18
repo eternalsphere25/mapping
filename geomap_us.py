@@ -71,7 +71,21 @@ gdf_48 = gdf_50.loc[~gdf_50["NAME"].isin(["Alaska", "Hawaii"])]
 
 
 #------------------------------------------------------------------------------
-# PART 3: Save map of the United States with color-coded regions
+# PART 3: Save map of Japan (blank)
+#------------------------------------------------------------------------------
+
+# Generate map
+fig, ax = plt.subplots(figsize=(18,12))
+gdf_50.plot(ax=ax, linewidth=0.2, facecolor='gainsboro', edgecolor='snow')
+ax.set_axis_off()
+fig.tight_layout()
+
+# Save map as svg file
+save_map_to_disk(timestamp, 'usa_blank.svg')
+
+
+#------------------------------------------------------------------------------
+# PART 4: Save map of the United States with color-coded regions
 #------------------------------------------------------------------------------
 
 # Assign colors to different regions of the United States
@@ -96,7 +110,7 @@ save_map_to_disk(timestamp, 'usa_regions.svg')
 
 
 #------------------------------------------------------------------------------
-# PART 4: Save map of the United States with selected states
+# PART 5: Save map of the United States with selected states
 #------------------------------------------------------------------------------
 
 # Select specific groups of states

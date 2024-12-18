@@ -96,7 +96,21 @@ gdf_pref_jp = gdf_pref_jp[
 
 
 #------------------------------------------------------------------------------
-# PART 3: Save map of Japan with color-coded prefectures
+# PART 3: Save map of Japan (blank)
+#------------------------------------------------------------------------------
+
+# Generate map
+fig, ax = plt.subplots(figsize=(18,12))
+gdf_pref_jp.plot(ax=ax, linewidth=0.2, facecolor='gainsboro', edgecolor='snow')
+ax.set_axis_off()
+fig.tight_layout()
+
+# Save map as svg file
+save_map_to_disk(timestamp, 'japan_blank.svg')
+
+
+#------------------------------------------------------------------------------
+# PART 4: Save map of Japan with color-coded prefectures
 #------------------------------------------------------------------------------
 
 # Assign colors to different regions of Japan
@@ -125,7 +139,7 @@ save_map_to_disk(timestamp, 'japan_prefectures.svg')
 
 
 #------------------------------------------------------------------------------
-# PART 4: Save map of Japan with selected prefectures
+# PART 5: Save map of Japan with selected prefectures
 #------------------------------------------------------------------------------
 
 # Select specific groups of prefectures
